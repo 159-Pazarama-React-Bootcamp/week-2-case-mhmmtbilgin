@@ -64,15 +64,21 @@ class TodoList extends React.Component {
         <div className="todo">
           <div className="todo__header">
             <span className="todo__title">To Do List </span>
-            <h1>{name}</h1>
-            <span className="todo__add" onClick={() => this.openModal()}>
+            <h2>{name}</h2>
+            <button className="form-btn" onClick={() => this.openModal()}>
               ekle
-            </span>
+            </button>
             <ReactModal
               isOpen={this.state.isModalOpen}
               className={"todo__react-modal"}
             >
               <div className="todo__modal">
+                <span
+                  className="todo__close-modal"
+                  onClick={() => this.closeModal()}
+                >
+                  Modal'ı Kapat X
+                </span>
                 <h1 id="heading">To do Gir</h1>
                 <div className="todo__modal-item">
                   <Formik
@@ -82,34 +88,26 @@ class TodoList extends React.Component {
                     onSubmit={addTodo}
                   >
                     {({ values, handleChange, handleSubmit, handleBlur }) => (
-                      <div>
-                        <div className="form-group">
-                          <input
-                            name="content"
-                            value={values.content}
-                            onChange={handleChange("content")}
-                            onBlur={handleBlur}
-                            className="form-control"
-                            type={"text"}
-                          />
-                        </div>
+                      <div className="form-group">
+                        <input
+                          name="content"
+                          value={values.content}
+                          onChange={handleChange("content")}
+                          onBlur={handleBlur}
+                          className="form-input"
+                          type={"text"}
+                        />
+
                         <button
                           type="button"
                           onClick={handleSubmit}
-                          className="todo__add"
+                          className="form-btn"
                         >
                           Ekle
                         </button>
                       </div>
                     )}
                   </Formik>
-
-                  <span
-                    className="todo__close-modal"
-                    onClick={() => this.closeModal()}
-                  >
-                    Kapat
-                  </span>
                 </div>
               </div>
             </ReactModal>

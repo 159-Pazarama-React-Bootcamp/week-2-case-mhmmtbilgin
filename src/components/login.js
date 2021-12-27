@@ -9,14 +9,18 @@ export default function login() {
   };
   return (
     <div>
-      <div className="form-group">
-        <input placeholder="İsim" onChange={(e) => setName(e.target.value)} />
+      <div className="form-login">
+        <input
+          className="form-input"
+          placeholder="Adınızı Giriniz..."
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Link to={"/todo"}>
+          <button type="button" onClick={userName} className="form-btn">
+            Giriş
+          </button>
+        </Link>
       </div>
-      <Link to={"/todo"}>
-        <button type="button" onClick={userName} className="todo__add">
-          Ekle
-        </button>
-      </Link>
     </div>
   );
 }
