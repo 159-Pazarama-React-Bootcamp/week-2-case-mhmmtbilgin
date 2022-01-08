@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: blanchedalmond;
+}
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.todo {
+  min-width: 500px;
+  min-height: 200px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 6px;
+  background-color: white;
+}
+.todo__header {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.todo__title {
+  font-size: 24px;
+  font-weight: 800;
+}
+.todo__list {
+  width: 100%;
+  margin: 10px;
+}
+
+.todo__item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.todo__delete,
+.todo__update,
+.todo__add {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin:5px 10px;
+}
+.todo__delete{
+  background-color: red;
+  color:yellow;
+  padding:10px;
+  border-radius:4px;
+}
+.todo__update{
+  padding:10px;
+  border-radius:4px;
+  background-color: orange;
+  color: white;
+  border-radius: 4px;
+
+}
+.todo__content{
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+}
+.react-modal{
+  width: 300px;
+  height: 300px;
+
+}
+.todo__modal{
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border:1px solid #ccc;
+}
+.todo__modal-item{
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-login{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-input{
+  width: 250px;
+  height: 30px;
+  border: 1px solid #aaa;
+  padding: 4px;
+  border-radius: 5px;
+  
+}
+.form-input:focus{
+  border: none;
+}
+.form-btn{
+  width: 75px;
+  height: 30px;
+  border: 1px solid #aaa;
+  background-color: white;
+  margin: 10px;
+  border-radius: 4px;
+
+}
+.form-btn:hover{
+  background-color: #ccc;
+  color: white;
+}
+.todo__close-modal{
+  cursor: pointer;
+}
